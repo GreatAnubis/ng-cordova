@@ -7,13 +7,13 @@ angular.module('ngCordova.plugins.vibration', [])
 
     return {
       vibrate: function (times) {
-        return navigator.notification.vibrate(times);
+        return navigator.vibrate(times);
       },
-      vibrateWithPattern: function (pattern, repeat) {
-        return navigator.notification.vibrateWithPattern(pattern, repeat);
+      vibrateWithPattern: function (pattern) {
+        return navigator.vibrate(pattern);
       },
       cancelVibration: function () {
-        return navigator.notification.cancelVibration();
+        return navigator.vibrate(0);
       }
     };
   }]);
